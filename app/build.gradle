@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.anubhav.apppali"
         minSdkVersion 19
@@ -29,6 +29,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.airbnb.android:lottie:2.2.5'
     compile 'com.victor:lib:1.0.4'
+    compile 'com.ramotion.paperonboarding:paper-onboarding:1.1.1'
 
     testCompile 'junit:junit:4.12'
 }

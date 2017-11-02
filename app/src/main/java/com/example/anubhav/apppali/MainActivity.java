@@ -1,6 +1,9 @@
 package com.example.anubhav.apppali;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,10 +11,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ramotion.paperonboarding.PaperOnboardingFragment;
+import com.ramotion.paperonboarding.PaperOnboardingPage;
 import com.victor.loading.newton.NewtonCradleLoading;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -93,8 +99,25 @@ public class MainActivity extends AppCompatActivity {
         }); */
 
 
+        PaperOnboardingPage scr1 = new PaperOnboardingPage("Hotels",
+                "All hotels and hostels are sorted by hospitality rating",
+                Color.parseColor("#678FB4"), R.drawable.onboarding_pager_circle_icon, R.drawable.onboarding_pager_round_icon);
+        PaperOnboardingPage scr2 = new PaperOnboardingPage("Banks",
+                "We carefully verify all banks before add them into the app",
+                Color.parseColor("#65B0B4"), R.drawable.onboarding_pager_round_icon, R.drawable.onboarding_pager_circle_icon);
+
+        ArrayList<PaperOnboardingPage> elements = new ArrayList<>();
+        elements.add(scr1);
+        elements.add(scr2);
 
 
+        PaperOnboardingFragment onBoardingFragment = PaperOnboardingFragment.newInstance(elements);
+
+        FragmentManager fragmentManager= this.getSupportFragmentManager();
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.boarding_container, onBoardingFragment);
+        fragmentTransaction.commit();
 
     }
 
