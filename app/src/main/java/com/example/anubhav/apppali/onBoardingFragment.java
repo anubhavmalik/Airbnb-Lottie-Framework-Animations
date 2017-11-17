@@ -16,7 +16,9 @@ public class onBoardingFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v= inflater.inflate(R.id.)
+        View v= inflater.inflate(R.layout.onboarding_fragment,container,false);
+
+
 
 
 

@@ -1,140 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:isScrollContainer="true">
+    android:background="@color/colorPrimary">
+    <View
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/colorPrimaryDark"
+        />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:isScrollContainer="true"
-    tools:context="com.example.anubhav.apppali.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <!--<Button-->
-        <!--android:id="@+id/mybutton23"-->
-        <!--android:layout_width="170dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_weight="0.16"-->
-        <!--android:onClick="Clickme"-->
-        <!--android:text="23%"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--android:layout_marginTop="0dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent" />-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:contentInsetStart="1dp"
+            style="@style/Toolbar">
 
-    <!--<Button-->
-        <!--android:id="@+id/mybutton58"-->
-        <!--android:layout_width="170dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_marginRight="8dp"-->
-        <!--android:layout_weight="0.16"-->
-        <!--android:onClick="Clickme"-->
-        <!--android:text="58%"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--android:layout_marginBottom="8dp" />-->
+            <ImageView
+                android:id="@+id/content_hamburger"
+                style="@style/ImageView.Hamburger"
+                android:src="@drawable/ic_menu_send" />
 
-    <!--<Button-->
-        <!--android:id="@+id/mybutton96"-->
-        <!--android:layout_width="170dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_weight="0.16"-->
-        <!--android:onClick="Clickme"-->
-        <!--android:text="96%"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginRight="8dp"-->
-        <!--app:layout_constraintVertical_bias="0.501"-->
-        <!--app:layout_constraintRight_toRightOf="parent" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="activity"
+                android:textSize="10sp" />
+        </android.support.v7.widget.Toolbar>
 
-    <!--<is.arontibo.library.ElasticDownloadView-->
-        <!--android:id="@+id/elastic"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="0dp"-->
-        <!--android:layout_marginLeft="0dp"-->
-        <!--android:layout_marginRight="0dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.533"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--android:layout_marginTop="0dp"-->
-        <!--app:layout_constraintVertical_bias="0.047" />-->
+        <ImageView
+            style="@style/ImageView.ContentItem"
+            android:layout_marginTop="@dimen/guillotine_medium_margin"
+            android:src="@drawable/rum_point" />
 
-    <!--<com.victor.loading.newton.NewtonCradleLoading-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginRight="8dp"-->
-        <!--android:id="@+id/newton"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--android:layout_marginBottom="8dp">-->
-
-    <!--</com.victor.loading.newton.NewtonCradleLoading>-->
-    
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="emojireaction.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="heartwithparticles.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="lineloading.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="materialloading2.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="preloader.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="rippleloadinganimation.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_fileName="simple.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
+        <ImageView
+            style="@style/ImageView.ContentItem"
+            android:src="@drawable/wallpaper" />
 
 
-</LinearLayout>
-</ScrollView>
+    </LinearLayout>
+</FrameLayout>
